@@ -1,0 +1,116 @@
+.bottom-bar {
+    position: fixed;
+    position: sticky;
+    bottom: 0;
+    width: 100%;
+    background-color: #080411;
+    padding: 25px 0px;
+    z-index: 9999;
+    margin-top: auto;
+    transition: padding 0.3s ease-in-out;
+}
+
+/* .bottom-bar:hover {
+    padding-bottom: 300px;
+} */
+
+.bottom-bar ul {
+    list-style-type: none;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    align-items: center;
+}
+
+.logo {
+    max-width: 45px;
+    max-height: 45px;
+    padding: 0;
+    margin: 0;
+    align-items: center;
+}
+
+.bottom-bar ul li {
+    display: block;
+    color: rgb(255, 255, 255);
+    background-color: none;
+    caret-color: transparent;
+    padding: 0px 10px 0px 10px;
+    width: 100%;
+}
+
+.hoverable {
+    padding: 0;
+    margin: 0;
+    cursor: pointer;
+}
+
+.hoverable:hover {
+    background-color: aqua;
+}
+
+p {
+    border-color: aliceblue;
+    border-style: groove;
+}
+
+.filter-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: fadeIn 0.3s ease-out forwards;
+    z-index: 9999;
+}
+
+.filter-centered-element {
+    display: flex;
+    flex-direction: column;
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    min-width: 30%;
+    max-width: 60%;
+    max-height: 400px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    color: #333;
+    text-align: center;
+    animation: zoomIn 0.3s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes zoomIn {
+    from {
+        opacity: 0;
+        transform: scale(0.9) translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1) translateY(0);
+    }
+}
+
+
+.sort-container {
+    display: flex;
+    flex-direction: row;
+}
+
+.sort-dropdown-menu {
+    display: flex;
+    flex-direction: column;
+}
