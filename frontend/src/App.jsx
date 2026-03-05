@@ -3,15 +3,23 @@ import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
 import TestCard from "./components/TestCard"
-import Home from "./pages/Home"
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import Gallery from "./pages/Gallery"
+import About from "./pages/About"
+import Contact from "./pages/Contact"
 
 function App() {
   const [count, setCount] = useState(0)
 
   return (
-    <>
-      <Home/>
-    </>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Gallery />} />
+        <Route path="/gallery"        element={<Gallery />} />
+        <Route path="/about"   element={<About />} />
+        <Route path="/contact" element={<Contact />} />
+      </Routes>
+    </BrowserRouter>
   )
 }
 
