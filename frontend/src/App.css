@@ -1,13 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=DM+Sans:wght@300;400;500&display=swap');
+
 #root {
-  max-width: 1280px;
   background-color: #a3a3a3;
   margin: 0 auto;
   text-align: center;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+  font-family: var(--font-mono);
+  font-size: 12px;
 }
+
 html, body {
+  font-family: 'DM Sans', sans-serif;
   margin: 0;
   padding: 0;
   min-height: 100vh;
@@ -20,9 +25,11 @@ html, body {
   will-change: filter;
   transition: filter 300ms;
 }
+
 .logo:hover {
   filter: drop-shadow(0 0 2em #646cffaa);
 }
+
 .logo.react:hover {
   filter: drop-shadow(0 0 2em #61dafbaa);
 }
@@ -31,6 +38,7 @@ html, body {
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
