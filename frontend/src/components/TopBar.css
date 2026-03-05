@@ -39,14 +39,34 @@
 
 }
 
-.hoverable {
-    padding: 0;
-    margin: 0;
-    cursor: pointer;
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    margin-left: auto;
 }
 
-.hoverable:hover {
-    background-color: aqua;
+.nav-link {
+    caret-color: transparent;
+    background: none;
+    border: none;
+    color: rgba(226, 224, 232, 0.45);
+    font-size: 13px;
+    font-family: 'DM Sans', sans-serif;
+    padding: 7px 14px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: color 0.15s, background 0.15s;
+}
+
+.nav-link:hover {
+    color: #e2e0e8;
+    background: rgba(255, 255, 255, 0.04);
+}
+
+.nav-link.active {
+    color: #a78bfa;
+    background: rgba(167, 139, 250, 0.15);
 }
 
 p {
