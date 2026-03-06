@@ -7,7 +7,7 @@ import { useState } from 'react'
 
 function Background() {
     return (
-        <div className="home">
+        <div>
             <div class="glow glow-1"></div>
             <div class="glow glow-2"></div>
         </div>
