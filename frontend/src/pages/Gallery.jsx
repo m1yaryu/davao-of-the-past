@@ -4,11 +4,13 @@ import BottomBar from '../components/BottomBar'
 import TestCard from '../components/TestCard'
 import './Gallery.css'
 import { useState } from 'react'
+import Background from '../components/Background'
 
 function Gallery() {
    return (
         <div className="home">
             <TopBar />
+            <Background />
 
 
             <div className="gallery-container">
