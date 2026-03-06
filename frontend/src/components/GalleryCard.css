@@ -1,5 +1,5 @@
 .test-card {
-    flex-basis: calc(33.333% - 40px);
+    flex-basis: calc(20% - 20px);
     flex-grow: 0;
     flex-shrink: 0;
     display: flex;

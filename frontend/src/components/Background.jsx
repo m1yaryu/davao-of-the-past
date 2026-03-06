@@ -1,7 +1,7 @@
 import './TopBar'
 import TopBar from './TopBar'
 import BottomBar from './BottomBar'
-import TestCard from './TestCard'
+import TestCard from './GalleryCard'
 import './Background.css'
 import { useState } from 'react'
 

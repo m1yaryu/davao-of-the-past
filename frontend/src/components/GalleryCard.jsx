@@ -1,7 +1,7 @@
-import './TestCard.css'
+import './GalleryCard.css'
 import React, { useState } from 'react'
 
-function TestCard({ info }) {
+function GalleryCard({ info }) {
     const [isOpen, setIsOpen] = useState(false);
 
     const toggleView = () => {
@@ -37,4 +37,4 @@ function TestCard({ info }) {
     )
 }
 
-export default TestCard
+export default GalleryCard
