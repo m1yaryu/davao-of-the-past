@@ -18,6 +18,12 @@ function TopBar() {
             className={`nav-link ${location.pathname === '/' ? 'active' : ''}`}
             onClick={() => navigate('/')}
           >
+            Home
+          </button>
+          <button
+            className={`nav-link ${location.pathname === '/gallery' ? 'active' : ''}`}
+            onClick={() => navigate('/gallery')}
+          >
             Gallery
           </button>
           <button
