@@ -1,0 +1,204 @@
+/* ── Overlay ── */
+.fm-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.65);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  z-index: 10000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  animation: fmFadeIn 0.2s ease forwards;
+}
+
+@keyframes fmFadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+/* ── Modal ── */
+.fm-modal {
+  background: #0e0a1c;
+  border: 1px solid rgba(167, 139, 250, 0.15);
+  border-radius: 18px;
+  width: min(520px, 100%);
+  max-height: 85vh;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 24px 64px rgba(0, 0, 0, 0.8), 0 0 0 1px rgba(167, 139, 250, 0.06);
+  animation: fmZoomIn 0.25s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  overflow: hidden;
+}
+
+@keyframes fmZoomIn {
+  from { opacity: 0; transform: scale(0.93) translateY(16px); }
+  to   { opacity: 1; transform: scale(1) translateY(0); }
+}
+
+/* ── Header ── */
+.fm-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 24px 16px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+  flex-shrink: 0;
+}
+
+.fm-header-left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.fm-title {
+  font-family: 'Syne', sans-serif;
+  font-size: 17px;
+  font-weight: 700;
+  color: #fff;
+  letter-spacing: 0.02em;
+}
+
+.fm-count {
+  background: rgba(167, 139, 250, 0.15);
+  border: 1px solid rgba(167, 139, 250, 0.25);
+  color: #a78bfa;
+  font-size: 11px;
+  font-weight: 500;
+  padding: 2px 10px;
+  border-radius: 99px;
+  letter-spacing: 0.04em;
+}
+
+.fm-close {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  color: rgba(226, 224, 232, 0.45);
+  width: 30px;
+  height: 30px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background 0.15s, color 0.15s;
+}
+.fm-close:hover {
+  background: rgba(255, 255, 255, 0.08);
+  color: #e2e0e8;
+}
+
+/* ── Body ── */
+.fm-body {
+  padding: 20px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+  overflow-y: auto;
+  flex: 1;
+  scrollbar-width: thin;
+  scrollbar-color: rgba(255,255,255,0.1) transparent;
+}
+
+/* ── Filter group ── */
+.fm-group {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  opacity: 0;
+  animation: fmGroupIn 0.3s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes fmGroupIn {
+  from { opacity: 0; transform: translateY(8px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.fm-group-label {
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: rgba(226, 224, 232, 0.45);
+}
+
+/* ── Chips ── */
+.fm-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.fm-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  color: #e2e0e8;
+  border-radius: 8px;
+  padding: 6px 14px;
+  font-size: 13px;
+  font-family: 'DM Sans', sans-serif;
+  cursor: pointer;
+  transition: background 0.15s, border-color 0.15s, color 0.15s, transform 0.1s;
+  caret-color: transparent;
+}
+
+.fm-chip:hover {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(167, 139, 250, 0.3);
+  color: #fff;
+}
+
+.fm-chip:active { transform: scale(0.96); }
+
+.fm-chip.active {
+  background: rgba(167, 139, 250, 0.15);
+  border-color: rgba(167, 139, 250, 0.5);
+  color: #a78bfa;
+}
+
+/* ── Footer ── */
+.fm-footer {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 8px;
+  padding: 16px 24px 20px;
+  border-top: 1px solid rgba(255, 255, 255, 0.07);
+  flex-shrink: 0;
+}
+
+.fm-btn-ghost {
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  color: rgba(226, 224, 232, 0.45);
+  border-radius: 10px;
+  padding: 9px 18px;
+  font-size: 13px;
+  font-family: 'DM Sans', sans-serif;
+  cursor: pointer;
+  transition: background 0.15s, color 0.15s, border-color 0.15s;
+}
+.fm-btn-ghost:hover {
+  background: rgba(255, 255, 255, 0.04);
+  color: #e2e0e8;
+}
+
+.fm-btn-primary {
+  background: #a78bfa;
+  border: none;
+  color: #0e0a1c;
+  border-radius: 10px;
+  padding: 9px 20px;
+  font-size: 13px;
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 500;
+  cursor: pointer;
+  transition: filter 0.15s, transform 0.1s;
+}
+.fm-btn-primary:hover { filter: brightness(1.1); }
+.fm-btn-primary:active { transform: scale(0.97); }
