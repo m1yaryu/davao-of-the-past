@@ -1,5 +1,6 @@
 import './BottomBar.css'
 import React, { useState } from 'react'
+import FilterModal from './FilterModal'
 
 
 function BottomBar() {
@@ -57,16 +58,11 @@ function BottomBar() {
 
         </ul>
 
-        {isFilterOpen && (
-            <div className="filter-overlay" onClick={toggleFilterView}>
-                <div className="filter-centered-element" onClick={(e) => e.stopPropagation()}>
-                    <div>1</div>
-                    <div>2</div>
-                    <div>3</div>
-                </div>
-            </div>
-        )
-        }
+        <FilterModal
+            isOpen={isFilterOpen}
+            onClose={toggleFilterView}
+            onApply={(filters) => console.log(filters)}
+        />
 
 
     </div >
