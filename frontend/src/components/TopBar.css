@@ -10,7 +10,7 @@
 .top-bar {
     display: flex;
     flex-direction: column;
-
+    border-bottom: 2px solid #2b2341;
 }
 
 .top-bar ul {
