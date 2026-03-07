@@ -1,4 +1,4 @@
-.test-card {
+.card {
     flex-basis: calc(20% - 20px);
     flex-grow: 0;
     flex-shrink: 0;
@@ -7,7 +7,7 @@
     align-items: center;
 }
 
-.test-overlay {
+.card-overlay {
     display: flex;
     flex-direction: column;
     width: 100%;
@@ -19,20 +19,20 @@
     overflow: hidden;
 }
 
-.test-overlay h3 {
+.card-overlay h3 {
     position: absolute;
     bottom: 0;
     margin-left: 20px;
     z-index: 999;
 }
 
-.test-overlay img {
+.card-overlay img {
     width: 300px;
     height: 300px;
     object-fit: cover;
 }
 
-.test-overlay::after {
+.card-overlay::after {
     content: '';
     position: absolute;
     bottom: 0;
@@ -68,21 +68,27 @@
 .centered-element {
     display: flex;
     flex-direction: row;
-    background: white;
+    background: #3c3749;
+    background: rgba(54, 48, 73, 0.952);
     padding: 30px;
     border-radius: 12px;
     min-width: 30%;
     max-width: 60%;
     max-height: 400px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
-    color: #333;
+    color: #a5a4a4;
     text-align: center;
     animation: zoomIn 0.3s cubic-bezier(0.16, 1, 0.3, 1) forwards;
 }
 
 @keyframes fadeIn {
-    from { opacity: 0; }
-    to { opacity: 1; }
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
 }
 
 @keyframes zoomIn {
@@ -90,6 +96,7 @@
         opacity: 0;
         transform: scale(0.9) translateY(20px);
     }
+
     to {
         opacity: 1;
         transform: scale(1) translateY(0);
@@ -105,12 +112,36 @@
 
 }
 
+.glow {
+    position: relative;
+    border-radius: 50%;
+    pointer-events: none;
+    filter: blur(1px);
+    opacity: 1;
+    z-index: 0;
+}
+
+.glow-1 {
+    width: 500px;
+    height: 500px;
+    background: #a78bfa;
+    top: -140px;
+    left: -120px;
+}
+
+.glow-2 {
+    width: 360px;
+    height: 360px;
+    background: #ffffff;
+    bottom: 60px;
+    right: -80px;
+}
+
 .element-info {
     display: flex;
     flex-direction: column;
     position: relative;
     flex: 1;
-    border: 1px solid black;
     justify-items: left;
     text-align: left;
     padding: 1vw;
@@ -120,8 +151,9 @@
 .button-container {
     display: inline-flex;
     flex-direction: row;
-    gap:10px;
+    gap: 10px;
 }
+
 .button-container button {
     width: 100%;
     border-radius: 50cqw;

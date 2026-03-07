@@ -9,8 +9,8 @@ function GalleryCard({ info }) {
     };
 
     return (
-        <div className="test-card">
-            <div className="test-overlay">
+        <div className="card">
+            <div className="card-overlay">
                 <button className="view-btn" onClick={toggleView} style={{ margin: 'auto' }}>
                     <img src={info.img} alt={info.title} />
                 </button>
@@ -18,11 +18,14 @@ function GalleryCard({ info }) {
             </div>
             {isOpen && (
                 <div className="overlay" onClick={toggleView}>
+
                     <div className="centered-element" onClick={(e) => e.stopPropagation()}>
-                        <img src={info.img} style={{ width: '100%' }} alt="Preview" />
+                        <div className="glow glow-1"></div>
+                        <div className="glow glow-2"></div>
+                        <img src={info.img} style={{ width: '100%',borderRadius:'10px' }} alt="Preview" />
                         <div className="element-info">
                             <h2>{info.title}</h2>
-                            <p style={{ flex: '1', border:'none',overflowWrap:'break-word' }}>{info.desc}</p>
+                            <p style={{ flex: '1', border: 'none', overflowWrap: 'break-word' }}>{info.desc}</p>
                             <div className="button-container">
                                 <button onClick={toggleView}>Close</button>
                                 <button >Share</button>
